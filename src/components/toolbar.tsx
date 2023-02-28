@@ -47,14 +47,15 @@ function Toolbar() {
 
   return (
     <div>
-      <div className="flex w-full bg-slate-200">
+      <div className="flex w-full bg-slate-400">
         {toolbar.map((tool, i)=> {
           if (tool.type === 'button') {
-            return <div className="" key={i}>
-              <button className="radius-none">
+            return <button 
+              key={i}
+              className="text-black bg-slate-200
+               border-spacing-1 p-2 m-1 text-sm rounded-none">
                 {tool.title}
               </button>
-            </div>
           }
           if (tool.type === 'divider') {
             return <div key={i}></div>

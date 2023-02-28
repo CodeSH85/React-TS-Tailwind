@@ -4,7 +4,12 @@ function Textarea() {
   
   return (
     <section>
-      <textarea name="" id="" cols="30" rows="10">
+      <textarea 
+        name=""
+        id=""
+        rows={10}
+        className="w-full min-h-full"
+      >
 
       </textarea>
     </section>
