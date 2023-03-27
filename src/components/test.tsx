@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import './App.css'
+// import './App.css'
 
 type Synonyms = {
   word: string;
@@ -9,7 +9,7 @@ type Synonyms = {
 
 const API_URL = import.meta.env.VITE_API_URL ?? `https://api.datamuse.com`;
 
-function Test() {
+function TestView() {
 
   // const [word, setWord] = useState<string>();
   const [word, setWord] = useState("");
@@ -56,4 +56,4 @@ function Test() {
   )
 }
 
-export default Test
+export default TestView

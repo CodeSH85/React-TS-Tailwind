@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import './Sidebar.css';
 import { RectangleGroupIcon } from '@heroicons/react/24/solid';
-
-interface Toolbar {
-  title: string,
-  icon: string,
-  label: string,
-  type: string
-}
+import { Side_bar } from "./type";
 
 function Sidebar() {
 
-  const [toolbar, setToolbar] = useState<Toolbar[]>(
+  const modeOptions = ['full', 'icon', 'text'];
+
+  const [mode, setMode] = useState<[]>();
+  
+  const [sidebar, setSidebar] = useState<Side_bar[]>(
     [
       {
         title: 'Dashboard',
@@ -49,7 +47,7 @@ function Sidebar() {
   return (
     <div>
       <div className="flex flex-col min-h-screen bg-red-400 w-20">
-        {toolbar.map((tool, i)=> {
+        {sidebar.map((tool, i)=> {
           if (tool.type === 'button') {
             return <button 
               key={i}

@@ -1,11 +1,13 @@
 import React, { Component, useState } from "react";
-import Toolbar from "./Sidebar/Sidebar";
+import Sidebar from "./Sidebar/SidebarComp";
+import Widget from "./Widget/WidgetComp";
 
 function MainView() {
   Component
   return (
-    <div className="w-full fixed top-0">
-      <Toolbar />
+    <div className="w-full flex">
+      <Sidebar />
+      <Widget />
     </div>
   )
 }
