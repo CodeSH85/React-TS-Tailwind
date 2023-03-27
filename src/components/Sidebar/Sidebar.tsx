@@ -1,44 +1,45 @@
 import React, { useState } from "react";
-import './toolbar.css';
+import './Sidebar.css';
+import { RectangleGroupIcon } from '@heroicons/react/24/solid';
 
 interface Toolbar {
   title: string,
-  active: boolean,
+  icon: string,
   label: string,
   type: string
 }
 
-function Toolbar() {
+function Sidebar() {
 
   const [toolbar, setToolbar] = useState<Toolbar[]>(
     [
       {
-        title: 'Font',
-        active: true,
+        title: 'Dashboard',
+        icon: '',
         label: 'Font',
         type: 'button'
       },
       {
         title: 'Size',
-        active: true,
+        icon: '',
         label: 'Size',
         type: 'button'
       },
       {
         title: 'Color',
-        active: true,
+        icon: '',
         label: 'color',
         type: 'button'
       },
       {
         title: 'divider',
-        active: true,
+        icon: '',
         label: 'divider',
         type: 'divider'
       },
       {
         title: 'Padding',
-        active: true,
+        icon: '',
         label: 'padding',
         type: 'button'
       }
@@ -47,7 +48,7 @@ function Toolbar() {
 
   return (
     <div>
-      <div className="flex w-full bg-slate-400">
+      <div className="flex flex-col min-h-screen bg-red-400 w-20">
         {toolbar.map((tool, i)=> {
           if (tool.type === 'button') {
             return <button 
@@ -55,6 +56,7 @@ function Toolbar() {
               className="text-black bg-slate-200
                border-spacing-1 p-2 m-1 text-sm rounded-none">
                 {tool.title}
+                <RectangleGroupIcon className="h-6 w-6 text-blue-500"/>
               </button>
           }
           if (tool.type === 'divider') {
@@ -66,4 +68,4 @@ function Toolbar() {
   )
 }
 
-export default Toolbar;
+export default Sidebar;
