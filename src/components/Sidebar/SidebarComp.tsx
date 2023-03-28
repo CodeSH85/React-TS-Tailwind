@@ -9,20 +9,20 @@ const Sidebar = (props: Props) => {
   const [sidebar, setSidebar] = useState<Side_bar[]>([
     {
       title: "Dashboard",
-      icon: "",
-      label: "Font",
+      icon: "HomeIcon",
+      label: "dashboard",
       type: "button",
     },
     {
-      title: "Size",
-      icon: "",
-      label: "Size",
+      title: "Report",
+      icon: "PencilSquareIcon",
+      label: "report",
       type: "button",
     },
     {
-      title: "Color",
-      icon: "",
-      label: "color",
+      title: "Chat",
+      icon: "ChatBubbleBottomCenterIcon",
+      label: "chat",
       type: "button",
     },
     {
@@ -32,42 +32,40 @@ const Sidebar = (props: Props) => {
       type: "divider",
     },
     {
-      title: "Padding",
-      icon: "",
-      label: "padding",
+      title: "File",
+      icon: "FolderIcon",
+      label: "file",
       type: "button",
     },
   ]);
 
   return (
     <div>
-      <div className="flex flex-col min-h-screen bg-red-400 w-20">
-        {sidebar.map((tool, i) => {
-          if (tool.type === "button") {
+      <div className="flex flex-col min-h-screen bg-slate-100 w-16">
+        {sidebar.map((menuItem, i) => {
+          if (menuItem.type === "button" && mode === 'text') {
             return (
               <button
                 key={i}
                 className="text-black bg-slate-200 border-spacing-1 p-2 m-1 text-sm rounded-none"
               >
-                {tool.title}
-                <HeroIcon icon="ArchiveBoxIcon" color="text-blue-500" />
-                <RectangleGroupIcon className="h-6 w-6 text-blue-500" />
+                {menuItem.title}
+                <HeroIcon icon="ArchiveBoxIcon" color="text-red-100" />
               </button>
             );
           }
-          if (tool.type === "button" && mode === 'icon') {
+          if (menuItem.type === "button" && mode === 'icon') {
             return (
               <button
                 key={i}
-                className="text-black bg-slate-200 border-spacing-1 p-2 m-1 text-sm rounded-none"
+                className="text-black bg-slate-200 border-spacing-1 m-2 rounded-none"
               >
-                {tool.title}
-                <RectangleGroupIcon className="h-6 w-6 text-blue-500" />
+                <HeroIcon icon={menuItem.icon} color="text-blue-500" />
               </button>
             );
           }
-          if (tool.type === "divider") {
-            return <div key={i}></div>;
+          if (menuItem.type === "divider") {
+            return <div key={i}>|</div>;
           }
         })}
       </div>

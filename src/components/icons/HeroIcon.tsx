@@ -11,8 +11,7 @@ const HeroIcons = (props: Icons) => {
   return(
     <>
     {/* { @ts-ignore } */}
-    {color}
-    <IconComp className={`h-6 w-6 ${{color}}`} aria-hidden="true" />
+    <IconComp className={`h-6 w-6 ${color}`} aria-hidden="true" />
     </>
   )
 }
