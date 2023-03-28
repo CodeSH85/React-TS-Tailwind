@@ -1,3 +1,7 @@
+interface Props {
+  mode: string
+  test: number
+}
 interface Side_bar {
   title: string,
   icon: string,
@@ -5,4 +9,5 @@ interface Side_bar {
   type: string
 }
 
-export type {Side_bar};
+
+export type { Props, Side_bar };
