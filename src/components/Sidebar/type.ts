@@ -4,8 +4,9 @@ interface Props {
 }
 interface Side_bar {
   title: string,
-  icon: string,
+  icon?: string,
   label: string,
+  color?: string,
   type: string
 }
 

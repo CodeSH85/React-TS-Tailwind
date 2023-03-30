@@ -10,12 +10,14 @@ const Sidebar = (props: Props) => {
     {
       title: "Dashboard",
       icon: "HomeIcon",
+      color: 'red-600', // text-red-600
       label: "dashboard",
       type: "button",
     },
     {
       title: "Report",
       icon: "PencilSquareIcon",
+      color: 'blue-600', // text-blue-600
       label: "report",
       type: "button",
     },
@@ -23,17 +25,18 @@ const Sidebar = (props: Props) => {
       title: "Chat",
       icon: "ChatBubbleBottomCenterIcon",
       label: "chat",
+      color: 'purple-600', // text-purple-600
       type: "button",
     },
     {
       title: "divider",
-      icon: "",
       label: "divider",
       type: "divider",
     },
     {
       title: "File",
       icon: "FolderIcon",
+      color: 'green-600', // text-green-600
       label: "file",
       type: "button",
     },
@@ -41,7 +44,7 @@ const Sidebar = (props: Props) => {
 
   return (
     <div>
-      <div className="flex flex-col min-h-screen bg-slate-100 w-16">
+      <div className="flex flex-col min-h-screen bg-slate-100 py-3 px-1">
         {sidebar.map((menuItem, i) => {
           if (menuItem.type === "button" && mode === 'text') {
             return (
@@ -58,9 +61,9 @@ const Sidebar = (props: Props) => {
             return (
               <button
                 key={i}
-                className="text-black bg-slate-200 border-spacing-1 m-2 rounded-none"
+                className="text-black bg-slate-200 w-fit m-1 p-2 rounded-md"
               >
-                <HeroIcon icon={menuItem.icon} color="text-blue-500" />
+                <HeroIcon icon={menuItem.icon} color={`text-${menuItem.color}`} />
               </button>
             );
           }
