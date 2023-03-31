@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Widget = () => {
   return (
-    <div className="bg-white shadow w-fit rounded-lg p-4 flex items-center">
+    <div className="flex items-center">
       <div className="">
         <img
           src="https://fakeimg.pl/200x200/?retina=1&text=Avatar&font=noto" alt="avatar"
