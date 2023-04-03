@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { RectangleGroupIcon } from "@heroicons/react/24/solid";
 import HeroIcon from "../icons/HeroIcon";
 import { Side_bar, Props } from "./type";
 
 const Sidebar = (props: Props) => {
   const modeOptions = ["full", "icon", "text"];
-  const { mode } = props;
+  const { mode, getProgram } = props;
   const [sidebar, setSidebar] = useState<Side_bar[]>([
     {
       title: "Dashboard",
@@ -62,6 +61,7 @@ const Sidebar = (props: Props) => {
               <button
                 key={i}
                 className="text-black bg-slate-200 w-fit m-1 p-2 rounded-md"
+                onClick={ () => getProgram(menuItem.label) }
               >
                 <HeroIcon icon={menuItem.icon} color={`text-${menuItem.color}`} />
               </button>

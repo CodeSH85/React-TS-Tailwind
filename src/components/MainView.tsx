@@ -3,12 +3,16 @@ import Sidebar from "./Sidebar/SidebarComp";
 import BrowseView from "./Browse/BrowseView";
 
 const MainView = () => {
-  Component
+  const getProgram = (program: string) => {
+    const currentProgram = program;
+    console.log('program: ', currentProgram);
+  };
   return (
     <div className="w-screen flex">
       <Sidebar 
         mode="icon"
         test={123456}
+        getProgram={getProgram}
       />
       <BrowseView />
     </div>
