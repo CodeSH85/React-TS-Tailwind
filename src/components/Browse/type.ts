@@ -1,5 +1,8 @@
-interface Props {
+interface Browse_Props {
+  currentModule: string
+}
+interface Dashboard_Props {
   mode: string
 }
 
-export type {Props};
+export type {Browse_Props};

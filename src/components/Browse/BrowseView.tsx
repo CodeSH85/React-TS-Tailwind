@@ -1,26 +1,18 @@
 import React from "react";
-import WidgetComp from "../Widget/WidgetComp";
+import ChatModule from "../Modules/ChatModule";
+import DashboardModule from "../Modules/DashboardModule";
+import { Browse_Props } from "./type";
 
-const BrowseView = () => {
-  const dashBoardConfig = [
-    {
-      widget_type: 'user',
-      avatar_url: '', 
-    },
-    {
-      widget_type: 'chart',
-      data: 'test'
-    },
-    {
-      widget_type: 'news',
-      data: 'test'
-    }
-  ];
-  return (
+const BrowseView = (props: Browse_Props) => {
+  const {currentModule} = props;
+  return(
     <div className="w-full bg-slate-50 p-2">
-      <WidgetComp type="user"/>
-      <WidgetComp type="chart"/>
-      <WidgetComp type="news"/>
+      {
+        currentModule === 'dashboard'? <DashboardModule></DashboardModule> : null
+      }
+      {
+        currentModule === 'chat'? <ChatModule></ChatModule> : null
+      }
     </div>
   )
 }

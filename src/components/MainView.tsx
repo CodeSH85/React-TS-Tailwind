@@ -1,20 +1,27 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Sidebar from "./Sidebar/SidebarComp";
 import BrowseView from "./Browse/BrowseView";
 
 const MainView = () => {
-  const getProgram = (program: string) => {
-    const currentProgram = program;
-    console.log('program: ', currentProgram);
+
+  let [currentModule, setCurrentModule] = useState<string>("");
+  const getModule = (module: string) => {
+    console.log('Module: ', currentModule);
+    setCurrentModule(module);
   };
+
+  useEffect(() => {
+    
+  }, [currentModule]);
+
   return (
     <div className="w-screen flex">
       <Sidebar 
         mode="icon"
         test={123456}
-        getProgram={getProgram}
+        getModule={getModule}
       />
-      <BrowseView />
+      <BrowseView currentModule={currentModule}/>
     </div>
   )
 }

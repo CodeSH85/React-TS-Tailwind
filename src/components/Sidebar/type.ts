@@ -1,7 +1,7 @@
 interface Props {
   mode: string
   test: number
-  getProgram: Function
+  getModule: Function
 }
 interface Side_bar {
   title: string,

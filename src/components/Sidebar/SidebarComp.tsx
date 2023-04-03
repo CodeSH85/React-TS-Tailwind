@@ -4,7 +4,7 @@ import { Side_bar, Props } from "./type";
 
 const Sidebar = (props: Props) => {
   const modeOptions = ["full", "icon", "text"];
-  const { mode, getProgram } = props;
+  const { mode, getModule } = props;
   const [sidebar, setSidebar] = useState<Side_bar[]>([
     {
       title: "Dashboard",
@@ -61,7 +61,7 @@ const Sidebar = (props: Props) => {
               <button
                 key={i}
                 className="text-black bg-slate-200 w-fit m-1 p-2 rounded-md"
-                onClick={ () => getProgram(menuItem.label) }
+                onClick={ () => getModule(menuItem.label) }
               >
                 <HeroIcon icon={menuItem.icon} color={`text-${menuItem.color}`} />
               </button>
