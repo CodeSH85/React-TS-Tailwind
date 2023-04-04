@@ -1,32 +1,47 @@
 [
   {
-    "title": "Font",
-    "active": true,
-    "label": "Font",
-    "type": "button"
+    "main_modules": [
+      {
+        "title": "Font",
+        "active": true,
+        "label": "Font",
+        "type": "button"
+      },
+      {
+        "title": "Size",
+        "active": true,
+        "label": "Size",
+        "type": "button"
+      },
+      {
+        "title": "Color",
+        "active": true,
+        "label": "color",
+        "type": "button"
+      },
+      {
+        "title": "divider",
+        "active": true,
+        "label": "divider",
+        "type": "divider"
+      },
+      {
+        "title": "Padding",
+        "active": true,
+        "label": "padding",
+        "type": "button"
+      }
+    ]
   },
   {
-    "title": "Size",
-    "active": true,
-    "label": "Size",
-    "type": "button"
-  },
-  {
-    "title": "Color",
-    "active": true,
-    "label": "color",
-    "type": "button"
-  },
-  {
-    "title": "divider",
-    "active": true,
-    "label": "divider",
-    "type": "divider"
-  },
-  {
-    "title": "Padding",
-    "active": true,
-    "label": "padding",
-    "type": "button"
+    "side_modules": [
+      {
+        "title": "Setting",
+        "active": true,
+        "label": "setting",
+        "type": "button"
+      }
+    ]
   }
+      
 ]

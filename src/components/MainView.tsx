@@ -4,9 +4,8 @@ import BrowseView from "./Browse/BrowseView";
 
 const MainView = () => {
 
-  let [currentModule, setCurrentModule] = useState<string>("");
+  let [currentModule, setCurrentModule] = useState<string>('dashboard');
   const getModule = (module: string) => {
-    console.log('Module: ', currentModule);
     setCurrentModule(module);
   };
 

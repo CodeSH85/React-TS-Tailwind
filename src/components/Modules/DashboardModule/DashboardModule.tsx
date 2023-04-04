@@ -1,5 +1,5 @@
 import React from "react";
-import WidgetComp from "../Widget/WidgetComp";
+import WidgetComp from "../../Widget/WidgetComp";
 
 const DashboardModule = () => {
   const dashBoardConfig = [

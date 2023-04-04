@@ -15,7 +15,7 @@ const Sidebar = (props: Props) => {
     },
     {
       title: "Report",
-      icon: "PencilSquareIcon",
+      icon: "DocumentTextIcon",
       color: 'blue-600', // text-blue-600
       label: "report",
       type: "button",
@@ -37,6 +37,13 @@ const Sidebar = (props: Props) => {
       icon: "FolderIcon",
       color: 'green-600', // text-green-600
       label: "file",
+      type: "button",
+    },
+    {
+      title: "Diagram",
+      icon: "PencilSquareIcon",
+      color: 'orange-600', // text-orange-600
+      label: "diagram",
       type: "button",
     },
   ]);

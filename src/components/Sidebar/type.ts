@@ -11,5 +11,4 @@ interface Side_bar {
   type: string
 }
 
-
 export type { Props, Side_bar };
