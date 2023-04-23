@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 const Widget = () => {
+
+  const user:string = 'Saul';
+
   return (
     <div className="flex items-center">
       <div className="">
@@ -11,9 +14,9 @@ const Widget = () => {
       </div>
       <div className="ml-3">
         <div className="text-lg">
-          Welcome<span>User</span>
+          Welcome<span>{user}</span>
         </div>
-        <div className="">Developer</div>
+        <div className="text-sm">Developer</div>
       </div>
     </div>
   )  
