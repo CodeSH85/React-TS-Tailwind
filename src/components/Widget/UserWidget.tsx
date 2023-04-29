@@ -24,8 +24,6 @@ i18n
     }
   });
 
-
-
 const Widget = () => {
 
   const user:string = 'Saul';

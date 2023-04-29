@@ -3,3 +3,7 @@ export interface Buttons {
   children: React.ReactNode;
 }
 
+export interface Input {
+  type?: string;
+  children: React.ReactNode;
+}

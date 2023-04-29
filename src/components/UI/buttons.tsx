@@ -15,4 +15,3 @@ const buttons = (props:Buttons) => {
 }
 
 export default buttons;
-

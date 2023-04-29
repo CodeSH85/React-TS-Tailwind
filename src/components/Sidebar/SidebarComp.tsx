@@ -68,7 +68,7 @@ const Sidebar = (props: Props) => {
               <button
                 key={i}
                 className="text-black bg-slate-200 w-fit m-1 p-2 rounded-md"
-                onClick={ () => getModule(menuItem.label) }
+                onClick={() => getModule(menuItem.label)}
               >
                 <HeroIcon icon={menuItem.icon} color={`text-${menuItem.color}`} />
               </button>
