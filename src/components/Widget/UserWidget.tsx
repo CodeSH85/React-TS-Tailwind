@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
-import { Buttons } from "../UI/index";
+import { ButtonComp } from "../UI/index";
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -42,8 +42,8 @@ const Widget = () => {
           {t('Welcome')}<span>{user}</span>
         </div>
         <div className="text-sm">Developer</div>
-        <Buttons type={'primary'}>Test</Buttons>
-        <Buttons type={'danger'}>Test</Buttons>
+        <ButtonComp type={'primary'}>Test</ButtonComp>
+        <ButtonComp type={'danger'}>Test</ButtonComp>
       </div>
     </div>
   )  
