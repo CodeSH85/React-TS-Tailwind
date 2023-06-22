@@ -1,27 +1,27 @@
 [
   {
+    "key": "selected",
+    "title": "select",
+    "type": "checkbox"
+  },
+  {
     "key": "id",
     "title": "ID",
     "type": "Numeric"
   },
   {
     "key": "crt_date",
-    "title": "create date",
-    "type": "date"
-  },
-  {
-    "key": "crt_usr",
-    "title": "create user",
+    "title": "created date",
     "type": "text"
   },
   {
-    "key": "select",
-    "title": "Select",
-    "type": "checkbox"
+    "key": "crt_usr",
+    "title": "created user",
+    "type": "text"
   },
   {
     "key": "order_no",
     "title": "order #",
-    "type": "string"
+    "type": "text"
   }
 ]
