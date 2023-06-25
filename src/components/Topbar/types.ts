@@ -1,8 +1,7 @@
 interface Props {
   mode: string
-  getModule: Function
 }
-interface Side_bar {
+interface Top_bar {
   title: string,
   icon?: string,
   label: string,
@@ -10,4 +9,4 @@ interface Side_bar {
   type: string
 }
 
-export type { Props, Side_bar };
+export type { Props, Top_bar };

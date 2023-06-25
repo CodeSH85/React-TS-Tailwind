@@ -10,7 +10,9 @@ const Table = (props: Table_Props) => {
   let [tableData, setTableData] = useState<Db_Data>(props.tableData);
 
   return (
-    <table style={{}}>
+    <table style={{}} 
+      className="w-full"
+    >
       <thead>
         <tr>
           {

@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import Sidebar from "./Sidebar/SidebarComp";
 import BrowseView from "./Browse/BrowseView";
+import TopBar from "./Topbar/TopBarComp";
 
 const MainView = () => {
 
@@ -14,13 +15,15 @@ const MainView = () => {
   }, [currentModule]);
 
   return (
-    <div className="w-screen flex">
+    <div className="w-screen h-screen flex">
       <Sidebar 
         mode="icon"
-        test={123456}
         getModule={getModule}
       />
-      <BrowseView currentModule={currentModule}/>
+      <div className="w-full h-screen">
+        <TopBar mode="icon"/>
+        <BrowseView currentModule={currentModule}/>
+      </div>
     </div>
   )
 }
