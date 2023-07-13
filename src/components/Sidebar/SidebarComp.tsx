@@ -49,37 +49,35 @@ const Sidebar = (props: Props) => {
   ]);
 
   return (
-    <div>
-      <div className="flex flex-col min-h-screen bg-slate-100 py-3 px-1">
-        {sidebar.map((menuItem, i) => {
-          if (menuItem.type === "button" && mode === 'text') {
-            return (
-              <button
-                key={i}
-                className="text-black bg-slate-200 border-spacing-1 p-2 m-1 text-sm rounded-none"
-              >
-                {menuItem.title}
-                <HeroIcon icon="ArchiveBoxIcon" color="text-red-100" />
-              </button>
-            );
-          }
-          if (menuItem.type === "button" && mode === 'icon') {
-            return (
-              <button
-                key={i}
-                className="text-black bg-slate-200 w-fit m-1 p-2 rounded-md"
-                onClick={() => getModule(menuItem.label)}
-              >
-                <HeroIcon icon={menuItem.icon} color={`text-${menuItem.color}`} />
-              </button>
-            );
-          }
-          if (menuItem.type === "divider") {
-            return <div key={i}>|</div>;
-          }
-        })}
-      </div>
-    </div>
+    <aside className="flex flex-col bg-slate-100 py-3 px-1">
+      {sidebar.map((menuItem, i) => {
+        if (menuItem.type === "button" && mode === 'text') {
+          return (
+            <button
+              key={i}
+              className="text-black bg-slate-200 border-spacing-1 p-2 m-1 text-sm rounded-none"
+            >
+              {menuItem.title}
+              <HeroIcon icon="ArchiveBoxIcon" color="text-red-100" />
+            </button>
+          );
+        }
+        if (menuItem.type === "button" && mode === 'icon') {
+          return (
+            <button
+              key={i}
+              className="text-black bg-slate-200 w-fit m-1 p-2 rounded-md"
+              onClick={() => getModule(menuItem.label)}
+            >
+              <HeroIcon icon={menuItem.icon} color={`text-${menuItem.color}`} />
+            </button>
+          );
+        }
+        if (menuItem.type === "divider") {
+          return <div key={i}>|</div>;
+        }
+      })}
+    </aside>
   );
 }
 

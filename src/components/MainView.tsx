@@ -15,14 +15,11 @@ const MainView = () => {
   }, [currentModule]);
 
   return (
-    <div className="w-screen h-screen flex">
-      <Sidebar 
-        mode="icon"
-        getModule={getModule}
-      />
-      <div className="w-full h-screen">
-        <TopBar mode="icon"/>
-        <BrowseView currentModule={currentModule}/>
+    <div className="w-screen min-h-screen flex">
+      <Sidebar mode="icon" getModule={getModule}/>
+      <div className="min-h-screen flex flex-col flex-1">
+        <TopBar currentModule={currentModule} mode="icon" />
+        <BrowseView currentModule={currentModule} /> 
       </div>
     </div>
   )

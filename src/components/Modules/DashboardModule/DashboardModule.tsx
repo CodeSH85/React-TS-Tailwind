@@ -17,7 +17,7 @@ const DashboardModule = () => {
     }
   ];
   return (
-    <div className="w-full bg-slate-50 p-2">
+    <div className="w-full bg-slate-50">
       <WidgetComp type="user"/>
       <WidgetComp type="chart"/>
       <WidgetComp type="news"/>
