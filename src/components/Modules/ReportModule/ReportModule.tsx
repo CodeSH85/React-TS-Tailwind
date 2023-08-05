@@ -4,6 +4,7 @@ import { Db_Data } from "../../../models/dbData";
 import _colModel from "../../../../public/colModel.json";
 import _dbData from "../../../../public/dbData.json";
 import Table from "../../UI/Table/Virtual-Table";
+import { InputComp } from "../../UI";
 
 const ReportModule = () => {
 
@@ -16,6 +17,18 @@ const ReportModule = () => {
 
   return (
     <>
+      <div className="">
+        {
+         colModel.map((col, index) => {
+          return (
+            <span key={index}>
+              <label htmlFor="">{col.title}</label>
+              <InputComp type={col.type}></InputComp>
+            </span>
+          )
+         }) 
+        }
+      </div>
       <div className="">
         Report Name
       </div>
