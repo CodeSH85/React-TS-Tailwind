@@ -1,9 +1,10 @@
 export interface Buttons {
   type?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export interface Input {
   type?: string;
-  children: React.ReactNode;
+  value: any;
+  children?: React.ReactNode;
 }
