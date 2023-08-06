@@ -8,11 +8,11 @@ const TopBarComp = (props: Props) => {
 
   return (
     // fixed
-    <nav className="w-full bg-slate-100">
+    <nav className="w-full sticky bg-slate-100">
       <ul className="flex p-2 justify-between">
-        <li>{ currentModule }</li>
+        <li className="capitalize">{ currentModule }</li>
         <li>
-          <button>test</button>
+          <button>Log out</button>
           {/* <ButtonComp type="primary"> */}
             {/* Options */}
           {/* </ButtonComp>   */}

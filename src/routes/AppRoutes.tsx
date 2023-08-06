@@ -4,7 +4,7 @@ import TestView from "../components/test";
 
 const AppRoutes = () => {
 return (         
-    <Routes>
+  <Routes>
     <Route path='/' element={<MainView/>} />
     <Route path='/test' element={<TestView/>} />
   </Routes>

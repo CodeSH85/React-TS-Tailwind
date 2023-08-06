@@ -11,8 +11,12 @@ const ReportModule = () => {
   let [colModel, setColModel] = useState<ColModel[]>(_colModel);
   let [dbData, setDbData] = useState<Db_Data[]>(_dbData);
 
-  const thStyle = {
-    position: 'inline'
+  // let [activeRow, setActiveRow] = useState<Db_Data>({});
+  let [activeRow, setActiveRow] = useState<any>({});
+
+  const getActiveRow = (rowData: Db_Data) => {
+    console.log(rowData);
+    setActiveRow(rowData);
   }
 
   return (
@@ -23,7 +27,7 @@ const ReportModule = () => {
           return (
             <span key={index}>
               <label htmlFor="">{col.title}</label>
-              <InputComp type={col.type}></InputComp>
+              <InputComp type={col.type} value={activeRow[col.key]}></InputComp>
             </span>
           )
          }) 
@@ -36,6 +40,7 @@ const ReportModule = () => {
         <Table 
           tableHeaders={colModel}
           tableData={dbData}
+          getActiveRow={getActiveRow}
         ></Table>
       </div>
     </>
