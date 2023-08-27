@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Table_Props } from "./type"
+import { Table_Props } from "./type";
 import { ColModel } from "../../../models/colModel";
 import { Db_Data } from "../../../models/dbData";
 
@@ -30,7 +30,7 @@ const Table = (props: Table_Props) => {
       <thead>
         <tr>
           {
-            tableHeader.map((col, i) => (
+            tableHeader.map((col: ColModel, i: number) => (
               <th
                 className="bg-blue-100 py-1 text-end px-1"
                 key={i}>

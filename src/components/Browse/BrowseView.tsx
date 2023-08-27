@@ -8,7 +8,8 @@ import { Browse_Props } from "./type";
 const BrowseView = (props: Browse_Props) => {
   const { currentModule } = props;
   return(
-    <div className="h-full bg-slate-50 p-3">
+    // <main className="h-full w-full overflow-auto bg-slate-50 p-2">
+    <main className="overflow-auto bg-slate-50 p-2">
       {
         currentModule === 'dashboard'? <DashboardModule></DashboardModule> : null
       }
@@ -21,7 +22,10 @@ const BrowseView = (props: Browse_Props) => {
       {
         currentModule === 'diagram'? <DiagramModule></DiagramModule> : null
       }
-    </div>
+      <div className="" style={{'width': '1800px', height: '500px', 'backgroundColor': '#000000'}}>
+        Test
+      </div>
+    </main>
   )
 }
 

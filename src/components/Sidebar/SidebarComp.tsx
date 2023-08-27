@@ -49,7 +49,7 @@ const Sidebar = (props: Props) => {
   ]);
 
   return (
-    <aside className="flex flex-col bg-slate-100 py-3 px-1">
+    <aside className="flex flex-col flex-none h-screen bg-slate-100 py-3 px-1">
       {sidebar.map((menuItem, i) => {
         if (menuItem.type === "button" && mode === 'text') {
           return (

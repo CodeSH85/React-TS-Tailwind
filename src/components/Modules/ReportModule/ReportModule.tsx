@@ -1,8 +1,8 @@
 import { Component, useEffect, useState } from "react";
 import { ColModel } from "../../../models/colModel";
 import { Db_Data } from "../../../models/dbData";
-import _colModel from "../../../../public/colModel.json";
-import _dbData from "../../../../public/dbData.json";
+import _colModel from "../../../models/colModel.json";
+import _dbData from "../../../models/dbData.json";
 import Table from "../../UI/Table/Virtual-Table";
 import { InputComp } from "../../UI";
 
@@ -37,7 +37,7 @@ const ReportModule = () => {
         Report Name
       </div>
       <div className="w-full">
-        <Table 
+        <Table
           tableHeaders={colModel}
           tableData={dbData}
           getActiveRow={getActiveRow}
