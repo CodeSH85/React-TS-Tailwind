@@ -1,6 +1,11 @@
 import { Buttons } from './types';
+// import { VariantProps, cva } from 'class-variance-authority';
 
-const buttons = (props:Buttons) => {
+// const buttonVariants = cva()
+
+
+
+const ButtonComp = (props:Buttons) => {
   const {type, children} = props;
   return (
     <>
@@ -22,4 +27,4 @@ const buttons = (props:Buttons) => {
   ) 
 }
 
-export default buttons;
+export default ButtonComp;

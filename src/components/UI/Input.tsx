@@ -1,9 +1,18 @@
 import React, { Component, useEffect, useState } from "react";
-import { Input } from './types';
 
+export interface Input {
+  id?: string;
+  label?: string; 
+  type?: string;
+  defaultChecked?: boolean
+  defaultValue?: string | number
+  value: any;
+  children?: React.ReactNode;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+}
 
 const InputComp = (props: Input) => {
-  const { type, value } = props;
+  const { type, value, onChange } = props;
   const [localValue, setLocalValue] = useState(value);
 
   useEffect(() => {
@@ -16,19 +25,19 @@ const InputComp = (props: Input) => {
       {
         type === 'checkbox' ? 
           <input 
-            id="" 
+            id=""
             type={type}
             checked={localValue} 
-            onChange={e => setLocalValue(e.target.checked)}
+            onChange={onChange}
             className='bg-slate-100 border-2 border-solid border-sky-500'
           /> 
           :
           <input 
             id="" 
-            type={type} 
+            type={type}
             defaultValue={localValue}
-            value={localValue} 
-            onChange={e => setLocalValue(e.target.value)}
+            value={localValue}
+            onChange={onChange}
             className='bg-slate-100 border-2 border-solid border-sky-500'
           />
       }

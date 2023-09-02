@@ -10,12 +10,8 @@ const MainView = () => {
     setCurrentModule(module);
   };
 
-  // useEffect(() => {
-    
-  // }, [currentModule]);
-
   return (
-    <div className="w-screen min-h-screen flex flex-row">
+    <div className="w-screen h-screen flex flex-row">
       <Sidebar mode="icon" getModule={getModule}/>
       <div className="flex flex-col grow relative">
         <TopBar currentModule={currentModule} mode="icon" />

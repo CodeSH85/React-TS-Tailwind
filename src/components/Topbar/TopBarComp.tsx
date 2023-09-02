@@ -8,7 +8,7 @@ const TopBarComp = (props: Props) => {
 
   return (
     // fixed
-    <nav className="w-full fixed bg-slate-100">
+    <nav className="w-full bg-slate-100">
     {/* <nav className="w-full bg-slate-100"> */}
       <ul className="flex p-2 justify-between">
         <li className="capitalize">{ currentModule }</li>
