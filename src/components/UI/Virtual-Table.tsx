@@ -1,12 +1,25 @@
 import { useState } from "react";
-import { Table_Props } from "./type";
-import { ColModel } from "../../../models/colModel";
-import { Db_Data } from "../../../models/dbData";
+import { ColModel } from "../../models/colModel";
+import { Db_Data } from "../../models/dbData";
+
+interface Table_Props {
+  tableHeaders: Array<ColModel>;
+  tableData: Array<Db_Data>;
+
+  activeRow?: object;
+  getActiveRow?: Function;
+  setActiveRow?: Function;
+  pageMode?: false;
+  rowHeight?: number;
+}
+
+type TableColModel = ColModel;
 
 const Table = (props: Table_Props) => {
+  
+  const [tableHeader, setTableHeader] = useState<ColModel[]>(props.tableHeaders);
+  const [tableData, setTableData] = useState<Db_Data[]>(props.tableData);
 
-  let [tableHeader, setTableHeader] = useState<ColModel>(props.tableHeaders);
-  let [tableData, setTableData] = useState<Db_Data>(props.tableData);
   let { getActiveRow } = props;
   let [activeRowId, setActiveRowId] = useState<number>(0);
 
@@ -24,9 +37,7 @@ const Table = (props: Table_Props) => {
   }
 
   return (
-    <table style={{}} 
-      className="w-full"
-    >
+    <table style={{}} className="w-full">
       <thead>
         <tr>
           {

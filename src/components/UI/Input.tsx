@@ -2,45 +2,30 @@ import React, { Component, useEffect, useState } from "react";
 
 export interface Input {
   id?: string;
+  name?: string;
   label?: string; 
   type?: string;
+
   defaultChecked?: boolean
   defaultValue?: string | number
-  value: any;
+  value?: any;
   children?: React.ReactNode;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  className?: string;
 }
 
 const InputComp = (props: Input) => {
-  const { type, value, onChange } = props;
-  const [localValue, setLocalValue] = useState(value);
+  const { ...rest } = props;
 
-  useEffect(() => {
-    setLocalValue(value);
-  }, [value]);
+  const className = props.className ?? 'bg-slate-100 border-2 border-solid border-sky-500';
 
   return (
-    <>      
+    <>
       <label htmlFor=""></label>
-      {
-        type === 'checkbox' ? 
-          <input 
-            id=""
-            type={type}
-            checked={localValue} 
-            onChange={onChange}
-            className='bg-slate-100 border-2 border-solid border-sky-500'
-          /> 
-          :
-          <input 
-            id="" 
-            type={type}
-            defaultValue={localValue}
-            value={localValue}
-            onChange={onChange}
-            className='bg-slate-100 border-2 border-solid border-sky-500'
-          />
-      }
+      <input
+        {...rest}
+        className={className}
+      />
     </>
   )
 }
