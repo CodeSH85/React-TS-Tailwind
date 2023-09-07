@@ -2,13 +2,13 @@ import React, { Component, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import MainView from './components/MainView'
 
-function App() {
+export default function App() {
   Component
   return (
-    <div className="App">
+    <>
+    <div>
       <MainView />
     </div>
+  </>
   )
 }
-
-export default App
