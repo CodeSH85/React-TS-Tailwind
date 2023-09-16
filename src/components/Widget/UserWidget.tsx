@@ -42,8 +42,8 @@ const Widget = () => {
           {t('Welcome')}<span>{user}</span>
         </div>
         <div className="text-sm">Developer</div>
-        <ButtonComp type={'primary'}>Test</ButtonComp>
-        <ButtonComp type={'danger'}>Test</ButtonComp>
+        <ButtonComp primary="true">Test</ButtonComp>
+        <ButtonComp danger="true">Test</ButtonComp>
       </div>
     </div>
   )  

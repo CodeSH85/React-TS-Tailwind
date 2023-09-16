@@ -1,12 +1,11 @@
 import React, { Component, useEffect, useState } from "react";
 
-export interface Input {
+export interface CheckBox_Type {
   id?: string;
   name?: string;
   label?: string; 
   type?: string;
 
-  defaultChecked?: boolean
   defaultValue?: string | number
   value?: any;
   children?: React.ReactNode;
@@ -14,7 +13,7 @@ export interface Input {
   className?: string;
 }
 
-const InputComp = (props: Input) => {
+const CheckBox = (props: CheckBox_Type) => {
   const { ...rest } = props;
 
   const className = props.className ?? 'bg-slate-100 border-2 border-solid border-sky-500';
@@ -23,6 +22,7 @@ const InputComp = (props: Input) => {
     <>
       <label htmlFor=""></label>
       <input
+        type="checkbox"
         {...rest}
         className={className}
       />
@@ -30,4 +30,4 @@ const InputComp = (props: Input) => {
   )
 }
 
-export default InputComp;
+export default CheckBox;
