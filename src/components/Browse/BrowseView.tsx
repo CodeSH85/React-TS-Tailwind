@@ -1,7 +1,7 @@
 import React from "react";
-import ChatModule from "../Modules/ChatModule/ChatModule";
-import DashboardModule from "../Modules/DashboardModule/DashboardModule";
-import ReportModule from "../Modules/ReportModule/ReportModule";
+import ChatModule from "../Modules/Chat/ChatModule";
+import DashboardModule from "../Modules/Dashboard/DashboardModule";
+import ReportModule from "../Modules/Report/ReportModule";
 import DiagramModule from "../Modules/Diagrams/DiagramModule";
 import { Browse_Props } from "./type";
 
