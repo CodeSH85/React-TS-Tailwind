@@ -9,9 +9,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.19",
     "@heroicons/react": "^2.0.16",
     "chart.js": "^4.2.1",
-    "clusterize.js": "^1.0.0",
     "i18next": "^22.4.15",
     "i18next-http-backend": "^2.2.0",
     "localforage": "^1.10.0",
