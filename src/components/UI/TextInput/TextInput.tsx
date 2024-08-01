@@ -1,17 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
-
-export interface Input {
-  id?: string;
-  name?: string;
-  label?: string; 
-  type?: string;
-
-  defaultValue?: string | number
-  value?: any;
-  children?: React.ReactNode;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  className?: string;
-}
+import type { Input } from "./type";
 
 const InputComp = (props: Input) => {
   const { ...other } = props;

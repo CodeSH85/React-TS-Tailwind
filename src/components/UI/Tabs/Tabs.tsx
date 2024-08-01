@@ -1,18 +1,7 @@
 import { useState } from "react";
 import classnames  from "classnames";
+import type { TabsProps, TabItem } from "./type";
 
-export type TabItem = {
-  title: string;
-  key: string | number;
-};
-
-export type TabsProps = {
-  items: TabItem[];
-  children?: React.ReactNode;
-  closable?: boolean;
-  onCloseTab?: (e: React.MouseEvent<HTMLElement>, key: string | number) => void;
-  [othersOptions: string]: unknown;
-};
 
 const Tabs = (props: TabsProps) => {
   const { items, closable, children, onCloseTab } = props;

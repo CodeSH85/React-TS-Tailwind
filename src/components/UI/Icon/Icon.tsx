@@ -1,6 +1,6 @@
 
 
-const IconComp = () => {
+const IconComp = (props) => {
   return(
     <>
     </>
